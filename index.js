@@ -2,7 +2,7 @@ const cors = require('cors')
 const bodyparser = require('body-parser')
 const path = require("path")
 const express = require('express')
-
+const port = process.env.PORT || 4000
 const app = express()
 const router = require('./routes/users')
 const questions = require('./routes/questions')
@@ -21,5 +21,5 @@ app.use('/questions', questions)
 
 app.use('/results', results)
 
-const port = process.env.PORT || 4000
+
 app.listen(port, () => console.log(`server running on port ${port}`))
