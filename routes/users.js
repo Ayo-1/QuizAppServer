@@ -59,7 +59,7 @@ router.post('/register', (req, res) => {
 					res.status(200).json({status: `${email} registered successfully`})
 				})
 			}
-		}).catch(err => res.json({err: "err"}))
+		}).catch(err => res.json({err: "err", error: err}))
 
 })
 router.post('/update/email', (req, res) => {
