@@ -8,7 +8,6 @@ const result = require('../models/result')
 const cors = require('cors')
 const bodyparser = require('body-parser')
 require('dotenv').config();
-router.use(cors())
 router.use(bodyparser.json())
 router.use(bodyparser.urlencoded({extended: false}))
 
